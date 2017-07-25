@@ -8,8 +8,8 @@ public class StatCharacter : MonoBehaviour {
 
     private void Start()
     {
-        stats.Add(new StatBase(4, "Power", "Poziom siły"));
-        stats.Add(new StatBase(2, "Vitality", "Poziom witalnosci"));
+        stats.Add(new StatBase(4, "Power", "Power Level."));
+        stats.Add(new StatBase(2, "Vitality", "Vitality Level."));
         //stats[0].AddStatBonus(new StatBonus(5)); przyklad uzycia
         stats[0].AddStatBonus(new StatBonus(4));
 
