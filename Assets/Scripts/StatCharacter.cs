@@ -12,8 +12,8 @@ public class StatCharacter : MonoBehaviour {
         stats.Add(new StatBase(2, "Vitality", "Poziom witalnosci"));
         //stats[0].AddStatBonus(new StatBonus(5)); przyklad uzycia
         stats[0].AddStatBonus(new StatBonus(4));
-        stats[0].RemoveStatBonus(new StatBonus(4));
 
         Debug.Log(stats[0].GetCalculatedStatValue());
+        Debug.Log(stats[1].GetCalculatedStatValue());
     }
 }
