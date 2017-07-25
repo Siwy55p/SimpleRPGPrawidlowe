@@ -25,7 +25,7 @@ public class StatBase
 
     public void RemoveStatBonus(StatBonus statBonus)
     {
-        this.BaseAdditives.Remove(BaseAdditives.Find(x=> x.BonusValue == statBonus.BonusValue);
+        this.BaseAdditives.Remove(BaseAdditives.Find(x=> x.BonusValue == statBonus.BonusValue));
     }
 
     public int GetCalculatedStatValue()

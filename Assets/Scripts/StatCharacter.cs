@@ -14,6 +14,5 @@ public class StatCharacter : MonoBehaviour {
         stats[0].AddStatBonus(new StatBonus(4));
 
         Debug.Log(stats[0].GetCalculatedStatValue());
-        Debug.Log(stats[1].GetCalculatedStatValue());
     }
 }
