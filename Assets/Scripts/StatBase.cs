@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BaseStat
+public class StatBase
 {
     public List<StatBonus> BaseAdditives { get; set; }
     public int BaseValue { get; set; }
@@ -10,7 +10,7 @@ public class BaseStat
     public string StatDescription { get; set; }
     public int FinalValue { get; set; }
 
-    public BaseStat(int baseValue, string statName, string statDescription)
+    public StatBase(int baseValue, string statName, string statDescription)
     {
         this.BaseAdditives = new List<StatBonus>();
         this.BaseValue = baseValue;

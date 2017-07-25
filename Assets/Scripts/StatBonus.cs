@@ -8,7 +8,6 @@ public class StatBonus{
     public StatBonus(int bonusValue)
     {
         this.BonusValue = bonusValue;
-        Debug.Log("Bonus");
     }
 
 }
