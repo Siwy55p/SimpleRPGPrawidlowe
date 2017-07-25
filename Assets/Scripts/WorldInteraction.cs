@@ -9,7 +9,7 @@ public class WorldInteraction : MonoBehaviour {
     public float SilaSkoku = 5;
     Rigidbody rb;
     public float SzybkoscPrzodTyl = 0.5f;
-    public float SzybkoscObrotKlawiszami = 30f;
+    public float SzybkoscObrotKlawiszami = 30f; // super zmiana
     
     NavMeshAgent playerAgent;
 
