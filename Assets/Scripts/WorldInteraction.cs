@@ -9,7 +9,7 @@ public class WorldInteraction : MonoBehaviour {
     public float SilaSkoku = 5;
     Rigidbody rb;
     public float SzybkoscPrzodTyl = 0.5f;
-    public float SzybkoscObrotKlawiszami = 30f; // super zmiana
+    public float SzybkoscObrotKlawiszami = 30f;
     
     NavMeshAgent playerAgent;
 
@@ -25,7 +25,6 @@ public class WorldInteraction : MonoBehaviour {
     }
 
 	//z tego bedziemy rezygnowali za duzo bledow przy sterowaniu klawiaturą
-	// a o tym zapomniales?
     private void FixedUpdate()
     {
         if (Input.GetKeyDown(KeyCode.Space) && grounded == true)
