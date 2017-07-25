@@ -9,7 +9,7 @@ public class WorldInteraction : MonoBehaviour {
     public float SilaSkoku = 5;
     Rigidbody rb;
     public float SzybkoscPrzodTyl = 0.5f;
-    public float SzybkoscObrotKlawiszami = 75f;
+    public float SzybkoscObrotKlawiszami = 30f;
     
     NavMeshAgent playerAgent;
 
@@ -23,6 +23,8 @@ public class WorldInteraction : MonoBehaviour {
         yield return new WaitForSeconds(1);
         grounded = true;
     }
+
+	//z tego bedziemy rezygnowali za duzo bledow przy sterowaniu klawiaturą
     private void FixedUpdate()
     {
         if (Input.GetKeyDown(KeyCode.Space) && grounded == true)
