@@ -5,26 +5,24 @@ using UnityEngine;
 public class score : ItemPickUp {
 
     float wartosc;
-    score Scor;
+
     public score(float value)
     {
         wartosc = value;
     }
 	// Use this for initialization
 	void Start () {
-        Scor = new score(15);
+
 	}
     public override void Interact()
     {
         print("Interakcja with score");
+        Destroy(gameObject);
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Player")
-        {
-            Destroy(gameObject);
-        }
+        Interact();
     }
     
     // Update is called once per frame
