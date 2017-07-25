@@ -24,9 +24,10 @@ public class WorldInteraction : MonoBehaviour {
         grounded = true;
     }
 
-	//z tego bedziemy rezygnowali za duzo bledow przy sterowaniu klawiaturą
+    //z tego bedziemy rezygnowali za duzo bledow przy sterowaniu klawiaturą
     private void FixedUpdate()
     {
+    /*
         if (Input.GetKeyDown(KeyCode.Space) && grounded == true)
             {
             grounded = false;
@@ -36,12 +37,12 @@ public class WorldInteraction : MonoBehaviour {
             if (rb.useGravity == false) rb.useGravity = true;
 
             StartCoroutine("SetGrounded");
-        }
+        }*/
     }
     
     // Update is called once per frame
     void Update () {
-        
+        /*
             float h = Input.GetAxis("Horizontal");
             float v = Input.GetAxis("Vertical");
             if (Input.GetButton("Horizontal"))
@@ -54,7 +55,9 @@ public class WorldInteraction : MonoBehaviour {
             {
                 WlaczWylaczPlayerAgent(OpcjaAgentPlayer.EnableAndIsStopped, false);
                 transform.Translate(new Vector3(0, 0, v * SzybkoscPrzodTyl * Time.deltaTime));
-            }
+            }*/
+
+
             if (Input.GetMouseButtonDown(0) && grounded == true && !UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject())
             {
                 WlaczWylaczPlayerAgent(OpcjaAgentPlayer.EnableAndIsStopped, true);
