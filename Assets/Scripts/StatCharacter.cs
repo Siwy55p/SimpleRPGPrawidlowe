@@ -6,6 +6,7 @@ public class StatCharacter : MonoBehaviour {
 
     public List<StatBase> stats = new List<StatBase>();
 
+    
     private void Start()
     {
         stats.Add(new StatBase(4, "Power", "Power Level."));
@@ -14,7 +15,13 @@ public class StatCharacter : MonoBehaviour {
         stats[0].AddStatBonus(new StatBonus(4));
         Debug.Log(stats[0].GetCalculatedStatValue());
 
-
+        GameObject a = new GameObject("A");
+        GameObject b = new GameObject("B");
+        GameObject c = new GameObject("C");
+        GameObject d = new GameObject("D");
+        GameObject e = new GameObject("E");
+        GameObject f = new GameObject("F");
+        GameObject[,] twoDimension = new GameObject[2, 3] { { a, b, c }, { d, e, f } };
     }
 
     public void AddStatBonus(List<StatBase> statBonuses)

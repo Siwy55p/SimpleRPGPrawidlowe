@@ -12,7 +12,7 @@ public class score : ItemPickUp {
     }
 	// Use this for initialization
 	void Start () {
-
+        this.GetComponent<BoxCollider>().isTrigger = true;
 	}
     public override void Interact()
     {
