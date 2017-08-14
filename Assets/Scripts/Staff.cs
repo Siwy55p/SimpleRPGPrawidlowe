@@ -28,6 +28,7 @@ public class Staff : MonoBehaviour, IWeapon, IProjectileWeapon
 
     public void CastProjectile()
     {
-        throw new NotImplementedException();
+        Fireball fireballInstance = (Fireball)Instantiate(fireball, ProjectileSpawn.position, ProjectileSpawn.rotation);
+        fireballInstance.Direction = ProjectileSpawn.forward;
     }
 }

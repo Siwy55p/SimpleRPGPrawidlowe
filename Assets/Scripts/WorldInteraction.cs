@@ -188,7 +188,13 @@ public class WorldInteraction : MonoBehaviour {
         RaycastHit InteractionInfo; // informacje na co kliknelismy takie jak pozycja i inne
         if(Physics.Raycast(interactionRay,out InteractionInfo, Mathf.Infinity)) //Mathf.Infinity dlugosc promienia Raycast zwraca prawde kiedy promien przecina obiekt z colliderem
         {
+            playerAgent.updateRotation = true;
             GameObject interactedObject = InteractionInfo.collider.gameObject;
+            if(interactedObject.tag == "Enemy")
+            {
+                Debug.Log("move to enemy");
+                interactedObject.GetComponent<Interactable>().MoveToInteraction(playerAgent);
+            }
             if(interactedObject.tag == "Interatable Object")
             {
                 Debug.DrawLine(interactionRay.origin, InteractionInfo.point);
